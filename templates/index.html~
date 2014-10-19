@@ -3,7 +3,7 @@
 		<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 			<link href="../static/bootstrap.css" rel="stylesheet">
-			<link href="{{url__for('static', filename='../static/index.css')}}" type="text/css" rel="stylesheet">
+			<link href="../static/index.css" type="text/css" rel="stylesheet">
 			<title>SaltShaker</title>
 		</head>
 		<body>
@@ -21,7 +21,7 @@
 				<div class='container'>
 					<div class='col-md-2'></div>
 					<div class='col-md-8' id='enter-complain'>
-						<h3>(>.<)/   Enter your complaint here</h3>
+						<h3>(╯°□°）╯︵ ┻━┻)    Enter your complaint here</h3>
 						<form action='/complain' method='POST'>
 							<input name='complaint' type='text' id='complaint-box'></input>
 							<!--<div id='button-container'>-->
