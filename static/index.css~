@@ -109,6 +109,9 @@ html, body {
 	font-weight: bold;
 	padding-top: 30px;
 	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%;
+	overflow-y: auto;
 }
 
 .main .vote-up {

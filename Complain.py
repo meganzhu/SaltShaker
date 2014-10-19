@@ -57,23 +57,24 @@ class Complaint_List:
 			return str([str(each) for each in self.lst])
 		return "empty list!"
 
+	def unique_complaint(self, complaint):
+		for c in self.lst:
+			if c.get_content() == complaint.get_content():
+				return False
+		return True
+
 	def add_complaint(self, string):
 		new_complaint = Complaint(string, Complaint.identity)
-		self.lst.append(new_complaint)
-
+		if self.unique_complaint(new_complaint):
+			self.lst.append(new_complaint)
+	
 	def sort(self):
 		def key(complaint):
 			return -complaint.score
 		self.lst.sort(key = key)
 
 	def get_complaints(self):
-		print('before sort')
-		self.print_list()
 		self.sort()
-		print('after sort')
-		self.print_list()
-		print('')
-		print('')
 		return self.lst
 
 	def salt(self, complaint_id):
